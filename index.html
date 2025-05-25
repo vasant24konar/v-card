@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Digital Card</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .card {
+      background: #00007E;
+      padding: 30px;
+      border-radius: 25px;
+      max-width: 400px;
+      width: 100%;
+      text-align: center;
+      position: relative;
+      border: 4px solid transparent;
+      background-clip: padding-box;
+      box-shadow: 0 0 0 4px transparent;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      top: -4px; left: -4px; right: -4px; bottom: -4px;
+      z-index: -1;
+      background: linear-gradient(45deg, #ff0000, #ff9900, #33cc33, #3399ff, #9933ff, #ff3399);
+      background-size: 400% 400%;
+      border-radius: 25px;
+      animation: borderMove 10s linear infinite;
+    }
+
+    @keyframes borderMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .card img.profile {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 15px;
+      border: 6px solid #fff;
+      background: #fff;
+    }
+
+    .card h1 {
+      font-size: 22px;
+      color: #fff;
+      margin: 10px 0 5px;
+    }
+
+    .card p {
+      font-size: 14px;
+      color: #ddd;
+    }
+
+    .button {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      margin: 10px auto;
+      padding: 10px 15px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: bold;
+      color: #000;
+      background-color: #fff;
+      width: 100%;
+      max-width: 300px;
+      transition: all 0.4s ease;
+      border: 1px solid #eaeaea;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .button:hover {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      transform: translateY(-2px);
+    }
+
+    .button .icon {
+      width: 40px;
+      height: 40px;
+      background: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 12px;
+      font-size: 18px;
+      color: #FE0000;
+      transition: all 0.3s ease;
+      border: 1px solid #ccc;
+    }
+
+    .button.call:hover .icon {
+      background-color: #027af2;
+      color: #fff;
+      box-shadow: 0 0 10px #cac7c7;
+    }
+
+    .button.whatsapp:hover .icon {
+      background-color: #189d03;
+      color: #fff;
+      box-shadow: 0 0 10px #cac7c7;
+    }
+
+    .button.email:hover .icon {
+      background-color: #ffbf00;
+      color: #fff;
+      box-shadow: 0 0 10px #cac7c7;;
+    }
+
+    footer {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .social-icons {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .social-icons a {
+      width: 40px;
+      height: 40px;
+      display: inline-block;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      transform: scale(1.1);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    }
+
+    .social-icons img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    @media (max-width: 600px) {
+      .card {
+        padding: 20px;
+      }
+      .button {
+        font-size: 14px;
+        padding: 8px 12px;
+      }
+      .button .icon {
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <img src="Avika_Enterprise.png" alt="Profile Photo" class="profile">
+    <h1>AVIKA ENTERPRISE</h1>
+    <h1>CCTV CAMERA WALE</h1>
+
+    <a href="tel:+916355475537" class="button call">
+      <div class="icon"><i class="fas fa-phone"></i></div>Call Me
+    </a>
+    <a href="https://wa.me/message/TMGYRUVO65QAD1" class="button whatsapp">
+      <div class="icon"><i class="fab fa-whatsapp"></i></div>WhatsApp
+    </a>
+    <a href="mailto:avikaenterprise369@gmail.com" class="button email">
+      <div class="icon"><i class="fas fa-envelope"></i></div>Email Me
+    </a>
+
+    <footer>
+      <div class="social-icons">
+        <a href="https://facebook.com/profile.php?id=61572933761500" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook"></a>
+        <a href="https://instagram.com/cctvcamerawale" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram"></a>
+        <a href="https://linkedin.com/in/yourprofile" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn"></a>
+        <a href="https://youtube.com/@cctvcamerawale" target="_blank"><img src="YouTube_full-color_icon_(2017).svg.png" alt="YouTube"></a>
+        <a href="https://yourwebsite.com" target="_blank"><img src="Websiteicon.png" alt="Website"></a>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
